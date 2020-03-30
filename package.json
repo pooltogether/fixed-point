@@ -13,7 +13,8 @@
   "main": "index.js",
   "scripts": {
     "test": "buidler test",
-    "compile": "buidler compile"
+    "compile": "buidler compile",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "devDependencies": {
     "@nomiclabs/buidler": "^1.2.0",
