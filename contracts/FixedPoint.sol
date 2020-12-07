@@ -18,7 +18,7 @@ along with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.
 
 pragma solidity 0.6.4;
 
-import "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol";
+import "./external/openzeppelin/SafeMath.sol";
 
 /**
  * @author Brendan Asselstine
