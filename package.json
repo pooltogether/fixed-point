@@ -1,6 +1,6 @@
 {
   "name": "@pooltogether/fixed-point",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "An extremely simple fixed point math library",
   "keywords": [
     "blockchain",
@@ -14,7 +14,8 @@
   "scripts": {
     "test": "buidler test",
     "compile": "buidler compile",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "prepack": "rm -rf build cache && buidler compile && truffle-extract -b build -o abis",
+    "postpublish": "PACKAGE_VERSION=$(./scripts/package-version.sh) && git tag -ae v$PACKAGE_VERSION && git push --tags"
   },
   "publishConfig": {
     "access": "public"
@@ -31,8 +32,15 @@
     "ethers": "^4.0.45",
     "solc": "0.6.4",
     "ts-node": "^8.6.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "truffle-extract": "pooltogether/truffle-extract"
   },
   "dependencies": {
-  }
+  },
+  "files": [
+    "LICENSE",
+    "abis/**",
+    "build/**",
+    "contracts/**"
+  ]
 }
