@@ -18,7 +18,7 @@ along with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.
 
 pragma solidity >=0.6.0 <0.8.0;
 
-import "./external/openzeppelin/SafeMath.sol";
+import "./external/openzeppelin/OpenZeppelinSafeMath_V3_3_0.sol";
 
 /**
  * @author Brendan Asselstine
@@ -27,7 +27,7 @@ import "./external/openzeppelin/SafeMath.sol";
  * This library calculates integer fractions by scaling values by 1e18 then performing standard integer math.
  */
 library FixedPoint {
-    using SafeMath for uint256;
+    using OpenZeppelinSafeMath_V3_3_0 for uint256;
 
     // The scale to use for fixed point numbers.  Same as Ether for simplicity.
     uint256 internal constant SCALE = 1e18;
