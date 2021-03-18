@@ -1,6 +1,6 @@
 {
   "name": "@pooltogether/fixed-point",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "An extremely simple fixed point math library",
   "keywords": [
     "blockchain",
@@ -34,8 +34,6 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3",
     "truffle-extract": "pooltogether/truffle-extract"
-  },
-  "dependencies": {
   },
   "files": [
     "LICENSE",

@@ -2,7 +2,7 @@
 
 // NOTE: Copied from OpenZeppelin Contracts version 3.3.0
 
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.4.0;
 
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow

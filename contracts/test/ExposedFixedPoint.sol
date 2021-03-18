@@ -16,7 +16,7 @@ You should have received a copy of the GNU General Public License
 along with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-pragma solidity 0.6.4;
+pragma solidity >=0.4.0;
 
 import "../FixedPoint.sol";
 
