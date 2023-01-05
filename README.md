@@ -28,4 +28,4 @@ Now run the tests:
 
 ```sh
 $ yarn test
-```
+```test
